@@ -1,0 +1,364 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.nav-link:hover {
+    opacity: 0.7;
+    color: rgb(45, 46, 46) !important;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(45, 46, 46)  ;
+  }
+.fa-ticket{
+    color: rgb(25, 83, 191);
+    font-size: 2.4rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+
+.social-info,.info-brand {
+    font-size: larger;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.social-info i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/* General Footer Styling */
+footer {
+    background-color: #ebebeb;
+    padding: 1rem 0; /* Add padding for better spacing */
+    width: 100%;
+    margin: 0; /
+}
+
+/* Container Styling */
+.info {
+    width: 100%;
+    max-width: 1200px; /* Optional: max-width for better alignment */
+    margin: 0 auto; /* Center container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+}
+
+/* Social Info Styling */
+.social-info {
+    margin-bottom: 1rem; /* Add space below social icons */
+}
+
+.social-info a {
+    color: black; /* Color for icons */
+    margin: 0 0.5rem; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none; /* Remove underline from icons */
+}
+
+.social-info a:hover {
+    color: #0073b1; /* Example color change on hover for LinkedIn */
+}
+
+/* Brand Info Styling */
+.info-brand {
+    margin-bottom: 1rem; /* Add space below brand info */
+}
+
+/* Link Styling */
+.info-link {
+    display: flex; /* Align links horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center links horizontally */
+}
+
+.info-link a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add padding */
+}
+
+.info-link a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.add-btn{
+    background-color:rgb(14, 62, 152)!important;
+    border: none !important;
+}
+/*card*/
+
+.card{
+    margin-bottom: 2rem;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.movie-link{
+    text-decoration: none;
+    color: black;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.card-movie{
+    margin: 1.2rem;
+    border: none !important;
+}
+/*show*/
+.show-img{
+    height: 30vh;
+
+}
+.butttons {
+    display: flex;
+    gap: 15rem; /* Adjust the gap between the buttons if necessary */
+}
+/* show ejs */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebarr, .booking-container {
+    flex: 1;
+  
+}
+
+.booking-container {
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-movies {
+    width: 100%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.show-img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    margin-left: 1rem;
+}
+
+.card-text p {
+    margin: 10px 0;
+}
+
+.booking .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.booking .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.booking .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.booking button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(14, 62, 152);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.booking button:hover {
+    background-color: #0056b3;
+}
+
+.booking-movie {
+    position: relative; /* Add this to enable absolute positioning within this container */
+    height: 82px;
+    width: 24rem;
+    border: 3px solid rgb(14, 62, 152);
+    margin-bottom: 2rem;
+    padding: 10px 40px 10px 40px; 
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #c2ddfc;
+}
+
+.btn-sy {
+    position: absolute; /* Add this to position the button absolutely */
+    top: 0; /* Adjust top position */
+    right:0px; /* Adjust right position */
+}
+
+
+  /* Media query for tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sidebarr {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .booking-container {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  
+  /* Media query for mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .card-movies {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .booking {
+      width: 100%;
+    }
+  }
+/* Base styles */
+h2 {
+    height: 82px;
+    width: 50rem;
+    border: 3px solid rgb(14, 62, 152);
+    padding: 10px 40px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #c2ddfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+    margin-left: 18%;
+    margin-bottom: 10rem;
+  }
+  
+  /* Media query for tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    h2 {
+      width: 40rem;
+      padding: 10px 30px;
+      margin-top: 12rem;
+      margin-left: 10%;
+      margin-bottom: 8rem;
+    }
+  }
+  
+  /* Media query for smaller tablets (max-width: 768px) */
+  @media (max-width: 768px) {
+    h2 {
+      width: 30rem;
+      padding: 10px 20px;
+      margin-top: 10rem;
+      margin-left: 8%;
+      margin-bottom: 6rem;
+    }
+  }
+  
+  /* Media query for mobile devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    h2 {
+      width: 90%;
+      padding: 10px 15px;
+      margin-top: 8rem;
+      margin-left: 5%;
+      margin-bottom: 4rem;
+    }
+  }
+  
+
+  /* navbar styling */
+
+/* Media queries for mobile screens */
+@media (max-width: 768px) {
+    .navbar-collapse {
+      display: none;
+      position: fixed;
+      top: 60px; /* Adjust based on your navbar height */
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 60px); /* Full height minus navbar */
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(-100%);
+    }
+  
+    .navbar-collapse.show {
+      display: flex;
+      transform: translateX(0);
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      margin-left: 0; /* Remove any margin-left applied */
+      width: 100%; /* Ensure it takes full width */
+    }
+  
+    .navbar-nav .nav-link {
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: white !important;
+      transition: background-color 0.3s;
+    }
+  
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(0, 0, 0,) !important; /* Adjust hover color for visibility */
+      border-radius: 5px !important;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  }

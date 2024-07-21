@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top " >
+  <div class="container-fluid">
+    <a class="navbar-brand" ><i class="fa-solid fa-ticket"></i></a>
+    <h1 class="navbar-heading d-block d-md-none mx-3" style="color: rgb(14, 62, 152);">Ticket-Booking</h1>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/movies"><b>All Movies</b></a>
+        <a class="nav-link" href="/movies/new"><b>Add New Movie</b></a>
+        <a class="nav-link" href="/about"><b>Know Developer</b></a>
+      </div>
+      
+      <div class="navbar-nav ms-auto">
+        <div class="navbar-nav ">
+          <% if (currUser) { %>
+            <a class="nav-link" href="/mybookings"><b>My Bookings</b></a>
+          <% } %>
+        </div> 
+        
+        <% if (!currUser) { %>
+          <a class="nav-link" href="/signup"><b>SignUp</b></a>
+          <a class="nav-link" href="/login"><b>LogIn</b></a>
+        <% } else { %>
+          <a class="nav-link" href="/logout"><b>LogOut</b></a>
+        <% } %>
+      </div>
+      
+    
+    </div>
+  </div>
+</nav>

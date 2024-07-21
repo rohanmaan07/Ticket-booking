@@ -1,0 +1,72 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<body>
+    <div class="mt-3"></div>
+    
+    <% if(currUser && currUser._id.toString() != movies.owner._id.toString()){ %>
+        <div class="main-container">
+            <div class="sidebarr">
+                <div class="card card-movies" style="width: 25rem">
+                    <a href="/movies/<%= movies._id %>" class="movie-link"></a>
+                    <img src="<%= movies.url.url %>" class="card-img-top show-img" alt="image"/>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <p>Added by: <%= movies.owner ? movies.owner.username : 'Unknown' %></p>
+                            <p>Actors: <i><%= movies.actors %></i></p>
+                            <p><%= movies.description %></p>
+                            <p>&#8377; <%= movies.price.toLocaleString("en-IN") %></p>
+                            <p><%= movies.releaseDate %></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-container">
+                <div class="booking">
+                    <form action="/mybookings" method="POST">
+                        <input type="hidden" name="movieId" value="<%= movies._id %>">
+                        <div class="mb-2">
+                            <label for="seatNumber" class="form-label">Seat Number</label>
+                            <input placeholder="Seat Number" name="seatNumber" type="text" class="form-control" style=" display: inline-block" required>
+                            <div class="invalid-feedback">
+                                Enter a seat number.
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="date" class="form-label">Date</label>
+                            <input placeholder="Date" name="date" type="date" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Select a date.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book</button>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    <% } %>
+    
+    <div class="card">
+        <% if(currUser && currUser._id.toString() === movies.owner._id.toString()){ %>
+            <div class="card card-movies" style="width: 25rem">
+                <a href="/movies/<%= movies._id %>" class="movie-link"></a>
+                <img src="<%= movies.url.url %>" class="card-img-top show-img" alt="image"/>
+                <div class="card-body">
+                    <p class="card-text">
+                        <p>Added by: <%= movies.owner ? movies.owner.username : 'Unknown' %></p>
+                        <p>Actors: <i><%= movies.actors %></i></p>
+                        <p><%= movies.description %></p>
+                        <p>&#8377; <%= movies.price.toLocaleString("en-IN") %></p>
+                        <p><%= movies.releaseDate %></p>
+                    </p>
+                </div>
+            </div>
+            <div class="butttons">
+                <a href="/movies/<%= movies._id %>/edit" class="btn btn-dark add-btn">Edit</a>
+                <form method="POST" action="/movies/<%= movies._id %>?_method=DELETE">
+                    <button class="btn btn-dark add-btn">Delete</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>

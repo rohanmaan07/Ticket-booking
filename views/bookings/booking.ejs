@@ -1,0 +1,34 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<% if (bookings.length > 0) { %>
+    <div class="bookings-list">
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+        <% bookings.forEach(booking => { %>
+            <div class="booking-item">
+               
+                <div class="card card-movies" style="width: 25rem; height: 30rem;">
+                    <a href="/movies/<%= booking.movie._id %>" class="movie-link"></a>
+                    <img src="<%= booking.movie.url.url %>" class="card-img-top show-img" alt="image"/>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <p>Actors: <i><%= booking.movie.actors %></i></p>
+                            <p><%= booking.movie.description %></p>
+                            <p>&#8377; <%= booking.movie.price.toLocaleString("en-IN") %></p>
+                            <p><%= booking.movie.releaseDate %></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="booking-movie">
+                    <form method="POST" action="/bookings/<%= booking._id %>?_method=DELETE">
+                        <button type="submit" class="btn btn-dark add-btn btn-sy"><i class="fa-regular fa-trash-can"></i></button>
+                    </form>
+                <p><b>Seat Number:</b> <%= booking.seatNumber %></p>
+                <p><b>Date: </b><%= new Date(booking.date).toLocaleDateString() %></p>
+                
+            </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<% } else { %>
+    <h2 class=" bookinhg-heading mt-5">No bookings found.</h2>
+<% } %>
