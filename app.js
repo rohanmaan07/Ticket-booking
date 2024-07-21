@@ -106,9 +106,9 @@ function validateObjectId(req, res, next) {
 }
 
 // Routes
-app.get("/", (req, res) => {
-  res.send("working");
-});
+// app.get("/", (req, res) => {
+//   res.send("working");
+// });
 
 // Demo user
 // app.get("/demouser", async (req, res) => {
