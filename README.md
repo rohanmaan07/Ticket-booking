@@ -10,18 +10,6 @@ A simple and efficient Ticket Booking System built using Python. This project si
 - View booking history
 - Simple CLI-based interface
 
-## 🛠️ Tech Stack
-
-- **Language:** Python 3
-- **Interface:** Command Line (CLI)
-- **Storage:** File-based (text files or CSV)
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.x installed on your system
-- Git (optional, for cloning the repository)
 
 ### Installation
 
